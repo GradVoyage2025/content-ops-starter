@@ -103,6 +103,21 @@
     <div class="container">
       <p>&copy; GradVoyage — Designed for global success. Contact: mavique.signature@gmail.com</p>
     </div>
-  </footer>
+  </footer><script>
+  // Fade-in animation for each section when it enters viewport
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
 </body>
 </html>
+
