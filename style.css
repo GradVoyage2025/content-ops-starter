@@ -1,12 +1,13 @@
-/* GradVoyage — Artistic Luxe Version
+/* GradVoyage — Subtle Luxe Version
    Fonts: Cormorant Garamond (titles), DM Sans (body)
-   Palette: Deep navy #0B1A3A, Gold #E6C36A, White #FFFFFF
+   Palette: Deep navy gradient + gold & white typography
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;700&display=swap');
 
 :root {
   --navy: #0B1A3A;
+  --navy-soft: #10254f;
   --deep-navy: #071C44;
   --gold: #E6C36A;
   --white: #ffffff;
@@ -14,7 +15,7 @@
   --max-width: 1100px;
 }
 
-/* Base & Reset */
+/* Base */
 * { box-sizing: border-box; }
 
 html {
@@ -24,12 +25,14 @@ html {
 
 body {
   margin: 0;
-  background: var(--navy);
+  background: linear-gradient(180deg, #0B1A3A 0%, #10254f 60%, #0B1A3A 100%);
   color: var(--white);
   font-family: 'DM Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   line-height: 1.7;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .container {
@@ -57,8 +60,8 @@ p, li {
 .site-header {
   position: sticky;
   top: 0;
-  background: linear-gradient(90deg, rgba(11,26,58,0.95), rgba(11,26,58,0.6));
-  backdrop-filter: saturate(120%) blur(4px);
+  background: rgba(7, 20, 45, 0.75);
+  backdrop-filter: saturate(130%) blur(10px);
   z-index: 50;
   transition: background 0.3s ease;
 }
@@ -67,69 +70,4 @@ p, li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0;
-}
-
-.logo img { height: 44px; }
-
-.main-nav a {
-  color: var(--white);
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
-}
-
-.main-nav a:hover {
-  color: var(--gold);
-}
-
-.main-nav .cta {
-  border: 2px solid var(--gold);
-  color: var(--gold);
-  padding: 0.45rem 0.9rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.main-nav .cta:hover {
-  background: var(--gold);
-  color: var(--navy);
-}
-
-/* Hero */
-.hero {
-  position: relative;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url('assets/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.45);
-  transform: scale(1.05);
-  transition: transform 1.5s ease;
-}
-
-.hero:hover .hero-bg {
-  transform: scale(1.1);
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(7,28,68,0.9), rgba(7,28,68,0.4));
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 5rem 1rem;
+  padding: 0.7
