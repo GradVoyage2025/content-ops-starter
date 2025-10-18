@@ -102,8 +102,9 @@ section, header, footer {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('assets/hero1.jpg') center/cover no-repeat;
-  opacity: 0.8;
+  background: url('assets/hero-dream.jpg') center/cover no-repeat;
+  opacity: 0.85;
+  filter: brightness(1.05);
   z-index: -1;
 }
 
