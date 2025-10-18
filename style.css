@@ -1,3 +1,6 @@
+.
+
+
 /* GradVoyage — Clean Luxe Blue Theme
    Palette: Royal Blue Background, Gold Headings, White Text
    Fonts: Playfair Display (titles) + Poppins (content)
@@ -116,6 +119,29 @@ section, header, footer {
   opacity: 0.8;              /* makes it visible but not harsh */
   filter: brightness(1.05);  /* slightly enhances clarity */
   z-index: -1;
+}
+.about {
+  text-align: center;
+  padding: 5rem 1rem;
+  background-color: var(--royal-blue);
+}
+
+.about .section-title {
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  max-width: 750px;
+  margin: 0 auto;
+  color: var(--white);
+  opacity: 0.92;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 300;
+  letter-spacing: 0.3px;
 }
 
 /* FOUNDER SECTION IMAGE FIX */
