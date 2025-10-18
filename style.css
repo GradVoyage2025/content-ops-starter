@@ -97,14 +97,15 @@ section, header, footer {
   background-color: var(--royal-blue);
 }
 
-.hero-bg {
+.hero-bg::after,
+.about-bg::after {
+  content: "";
   position: absolute;
   inset: 0;
-  background: url('assets/hero-dream.jpg') center/cover no-repeat;
-  opacity: 0.85;
-  filter: brightness(1.05);
+  background: linear-gradient(to bottom, rgba(26,46,117,0.3), rgba(26,46,117,0.8));
   z-index: -1;
 }
+
 
 .hero-content {
   max-width: 800px;
