@@ -89,6 +89,7 @@ section, header, footer {
   position: absolute;
   inset: 0;
   background: url('hero1.jpg') center/cover no-repeat;
+
   background-color: var(--royal-blue);
   opacity: 0.85;
   filter: brightness(1.05);
