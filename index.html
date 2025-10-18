@@ -36,10 +36,18 @@
       </div>
     </div>
   </section>
+
 <section id="about" class="section about">
   <div class="about-bg"></div>
+
   <div class="container fade-in">
-    <h3 class="section-title">About GradVoyage</h3>
+    <div class="about-header">
+      <img src="assets/icon-globe.png" alt="GradVoyage Icon" class="about-icon">
+      <h3 class="section-title">About GradVoyage</h3>
+    </div>
+
+    <div class="underline"></div>
+
     <p class="about-text">
       <strong>GradVoyage</strong> is more than a consultancy — it’s a personalized journey designed to help students and professionals present their best selves to the world’s most prestigious universities.
       <br><br>
@@ -143,7 +151,19 @@
       <p>&copy; 2025 GradVoyage — Crafted with purpose and precision.</p>
     </div>
   </footer>
+  <script>
+// Parallax scroll effect for About section background
+window.addEventListener('scroll', () => {
+  const aboutBg = document.querySelector('.about-bg');
+  if (aboutBg) {
+    const scrollY = window.scrollY;
+    aboutBg.style.transform = `translateY(${scrollY * 0.1}px)`;
+  }
+});
+</script>
+
 </body>
 </html>
+
 
 
