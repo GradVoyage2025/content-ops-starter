@@ -34,7 +34,10 @@ body {
   padding: 5rem 1rem;
 }
 
-.section-title {
+/* 🔹 Universal Section Title Styling — Gold Accent Line */
+.section-title,
+.section h3,
+.founder-card h2 {
   position: relative;
   display: inline-block;
   color: var(--gold);
@@ -43,7 +46,60 @@ body {
   margin-bottom: 1.5rem;
   text-transform: capitalize;
   letter-spacing: 0.5px;
+  text-align: center;
 }
+
+/* Gold underline animation */
+.section-title::after,
+.section h3::after,
+.founder-card h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(230,195,106,0) 0%, var(--gold) 50%, rgba(230,195,106,0) 100%);
+  transition: width 0.6s ease;
+  border-radius: 2px;
+}
+
+/* Hover or scroll animation */
+.section-title:hover::after,
+.section h3:hover::after,
+.founder-card h2:hover::after {
+  width: 80%;
+}
+
+/* Optional fade-in effect when visible on scroll */
+.section.visible .section-title::after,
+.section.visible h3::after,
+.section.visible .founder-card h2::after {
+  animation: growLine 1.2s ease forwards 0.6s;
+}
+
+@keyframes growLine {
+  0% { width: 0; opacity: 0; }
+  100% { width: 80%; opacity: 1; }
+}
+
+/* Section padding for breathing space */
+.section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+/* Consistent paragraph text for sections */
+.section p,
+.about-text,
+.founder-card p {
+  color: var(--white);
+  opacity: 0.9;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
 
 /* Animated gold underline */
 .section-title::after {
@@ -325,6 +381,87 @@ body {
   color: var(--gold);
   font-style: italic;
   font-weight: 600;
+}
+/* ✨ Contact Section — Minimal Luxe Style */
+.contact {
+  background: linear-gradient(180deg, var(--royal-blue) 0%, var(--mid-blue) 100%);
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+.contact-intro {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: var(--white);
+  opacity: 0.9;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.contact-form {
+  max-width: 550px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--gold);
+  background: rgba(255,255,255,0.1);
+}
+
+.contact-info {
+  font-size: 0.95rem;
+  color: var(--white);
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Button styling */
+.contact .btn.primary {
+  background: var(--gold);
+  color: var(--royal-blue);
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.contact .btn.primary:hover {
+  background: #f8dc91;
+  box-shadow: 0 4px 14px rgba(230,195,106,0.25);
+  transform: translateY(-2px);
 }
 
 /* Footer */
