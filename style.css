@@ -103,39 +103,43 @@ section, header, footer {
   min-height: 90vh;
   padding: 2rem 1rem;
   overflow: hidden;
+  background-color: #1A2E75;
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('assets/Hero1.jpg') center/cover no-repeat;
-  opacity: 0.8;
-  filter: brightness(1.1);
+  background-image: url("assets/Hero1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;              /* makes it visible but not harsh */
+  filter: brightness(1.05);  /* slightly enhances clarity */
   z-index: -1;
 }
 
-.hero-content {
-  max-width: 800px;
+/* FOUNDER SECTION IMAGE FIX */
+.founder {
+  position: relative;
+  padding: 5rem 1rem;
+  background-color: #1A2E75;
 }
 
-.hero-logo {
-  height: 70px;
-  margin-bottom: 1.25rem;
+.founder-photo {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  filter: brightness(1.05);
+}
+
+.logo img {
+  height: 60px;
+  display: block;
+  margin: 0 auto;
   filter: brightness(1.2);
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  color: var(--gold);
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  color: var(--white);
-  opacity: 0.95;
-  font-weight: 300;
-  margin-bottom: 2rem;
 }
 
 .btn {
