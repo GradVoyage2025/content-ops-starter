@@ -14,7 +14,11 @@
 }
 
 /* Basic Reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 html {
   scroll-behavior: smooth;
@@ -22,148 +26,18 @@ html {
 }
 
 body {
-  background: var(--royal-blue);
+  background-color: var(--royal-blue);
   color: var(--white);
   font-family: 'Poppins', sans-serif;
   line-height: 1.7;
   font-size: 1rem;
-/* About GradVoyage Section */
-.about {
-  background: transparent;
-  text-align: center;
-  padding: 5rem 1rem;
+  overflow-x: hidden;
 }
 
-/* 🔹 Universal Section Title Styling — Gold Accent Line */
-.section-title,
-.section h3,
-.founder-card h2 {
-  position: relative;
-  display: inline-block;
-  color: var(--gold);
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
-  text-align: center;
-}
-
-/* Gold underline animation */
-.section-title::after,
-.section h3::after,
-.founder-card h2::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -8px;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(230,195,106,0) 0%, var(--gold) 50%, rgba(230,195,106,0) 100%);
-  transition: width 0.6s ease;
-  border-radius: 2px;
-}
-
-/* Hover or scroll animation */
-.section-title:hover::after,
-.section h3:hover::after,
-.founder-card h2:hover::after {
-  width: 80%;
-}
-
-/* Optional fade-in effect when visible on scroll */
-.section.visible .section-title::after,
-.section.visible h3::after,
-.section.visible .founder-card h2::after {
-  animation: growLine 1.2s ease forwards 0.6s;
-}
-
-@keyframes growLine {
-  0% { width: 0; opacity: 0; }
-  100% { width: 80%; opacity: 1; }
-}
-
-/* Section padding for breathing space */
-.section {
-  padding: 4rem 0;
-  text-align: center;
-}
-
-/* Consistent paragraph text for sections */
-.section p,
-.about-text,
-.founder-card p {
+/* Keep every section royal blue */
+section, header, footer {
+  background-color: var(--royal-blue);
   color: var(--white);
-  opacity: 0.9;
-  font-weight: 300;
-  letter-spacing: 0.3px;
-}
-
-
-/* Animated gold underline */
-.section-title::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -8px;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(230,195,106,0) 0%, var(--gold) 50%, rgba(230,195,106,0) 100%);
-  transition: width 0.6s ease;
-  border-radius: 2px;
-}
-
-.section-title:hover::after {
-  width: 80%;
-}
-
-.about-text {
-  max-width: 750px;
-  margin: 0 auto;
-  color: var(--white);
-  opacity: 0.92;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  font-weight: 300;
-  letter-spacing: 0.3px;
-}
-
-/* Optional: apply underline animation to all section titles */
-.section h3.section-title {
-  text-align: center;
-  margin-bottom: 1.25rem;
-}
-
-/* Fade-in animation for smooth entrance */
-.fade-in {
-  opacity: 0;
-  transform: translateY(25px);
-  animation: fadeInUp 1.2s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.about h3 {
-  color: var(--gold);
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.about-text {
-  max-width: 750px;
-  margin: 0 auto;
-  color: var(--white);
-  opacity: 0.92;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  font-weight: 300;
 }
 
 /* Layout */
@@ -175,7 +49,7 @@ body {
 
 /* Header */
 .site-header {
-  background: var(--mid-blue);
+  background-color: var(--mid-blue);
   padding: 0.75rem 0;
   position: sticky;
   top: 0;
@@ -221,13 +95,23 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(180deg, var(--royal-blue) 0%, var(--mid-blue) 100%);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 80vh;
+  min-height: 90vh;
   padding: 2rem 1rem;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('assets/Hero1.jpg') center/cover no-repeat;
+  opacity: 0.8;
+  filter: brightness(1.1);
+  z-index: -1;
 }
 
 .hero-content {
@@ -235,7 +119,7 @@ body {
 }
 
 .hero-logo {
-  height: 60px;
+  height: 70px;
   margin-bottom: 1.25rem;
   filter: brightness(1.2);
 }
@@ -283,6 +167,49 @@ body {
   color: var(--royal-blue);
 }
 
+/* About Section */
+.about {
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(230,195,106,0) 0%, var(--gold) 50%, rgba(230,195,106,0) 100%);
+  transition: width 0.6s ease;
+  border-radius: 2px;
+}
+
+.section-title:hover::after {
+  width: 80%;
+}
+
+.about-text {
+  max-width: 750px;
+  margin: 0 auto;
+  color: var(--white);
+  opacity: 0.92;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
 /* Services Section */
 .section {
   padding: 4rem 0;
@@ -305,7 +232,7 @@ body {
 
 .services-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
@@ -336,7 +263,8 @@ body {
 
 /* Founder Section */
 .founder {
-  background: linear-gradient(180deg, var(--mid-blue) 0%, var(--royal-blue) 100%);
+  text-align: center;
+  padding: 5rem 1rem;
 }
 
 .founder-grid {
@@ -371,20 +299,14 @@ body {
   margin-bottom: 1rem;
 }
 
-.founder-card p {
-  color: var(--white);
-  opacity: 0.9;
-  margin-bottom: 1rem;
-}
-
 .quote {
   color: var(--gold);
   font-style: italic;
   font-weight: 600;
 }
-/* ✨ Contact Section — Minimal Luxe Style */
+
+/* Contact Section */
 .contact {
-  background: linear-gradient(180deg, var(--royal-blue) 0%, var(--mid-blue) 100%);
   text-align: center;
   padding: 5rem 1.5rem;
 }
@@ -446,39 +368,6 @@ body {
   text-decoration: underline;
 }
 
-/* Button styling */
 .contact .btn.primary {
   background: var(--gold);
-  color: var(--royal-blue);
-  padding: 0.9rem 2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.contact .btn.primary:hover {
-  background: #f8dc91;
-  box-shadow: 0 4px 14px rgba(230,195,106,0.25);
-  transform: translateY(-2px);
-}
-
-/* Footer */
-.site-footer {
-  padding: 2rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-  background: var(--mid-blue);
-  border-top: 1px solid rgba(255,255,255,0.05);
-  color: var(--white);
-  opacity: 0.85;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .services-list { grid-template-columns: 1fr; }
-  .founder-grid { grid-template-columns: 1fr; text-align: center; }
-  .founder-card { text-align: center; }
-  .hero { padding: 3rem 1rem; }
-}
+  color: var(--royal-
