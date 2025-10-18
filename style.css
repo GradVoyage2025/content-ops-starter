@@ -280,40 +280,41 @@ section, header, footer {
   font-style: italic;
   font-weight: 600;
 }
+/* ✨ TESTIMONIALS SECTION */
 .testimonials {
   background: linear-gradient(180deg, var(--royal-blue) 0%, var(--mid-blue) 100%);
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 6rem 1.5rem;
 }
 
 .testimonials .section-title {
   color: var(--gold);
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
 .testimonials .intro-text {
   color: var(--white);
   opacity: 0.9;
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto 3rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 300;
 }
 
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.8rem;
-  max-width: 1000px;
+  gap: 2rem;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(230, 195, 106, 0.2);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(230, 195, 106, 0.25);
+  border-radius: 14px;
   padding: 2rem;
   text-align: left;
   color: var(--white);
@@ -323,15 +324,16 @@ section, header, footer {
 
 .testimonial-card:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 18px rgba(230, 195, 106, 0.15);
 }
 
 .testimonial-card .quote {
   font-style: italic;
   font-size: 1.05rem;
-  margin-bottom: 1rem;
+  line-height: 1.7;
   color: rgba(255, 255, 255, 0.95);
-  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .testimonial-card h4 {
@@ -339,6 +341,21 @@ section, header, footer {
   font-weight: 500;
   color: var(--gold);
 }
+
+/* ✨ Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+.delay-4 { transition-delay: 0.8s; }
 
 /* ✨ Fade-in animation reused */
 .fade-in {
