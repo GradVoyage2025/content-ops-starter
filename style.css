@@ -81,12 +81,10 @@ section, header, footer {
   border-radius: 6px;
   transition: all 0.3s ease;
 }
-
 .main-nav .cta:hover {
   background: var(--gold);
   color: var(--royal-blue);
 }
-
 .hero {
   position: relative;
   display: flex;
@@ -107,7 +105,6 @@ section, header, footer {
   filter: brightness(1.05);
   z-index: -1;
 }
-
 
 .hero-content {
   max-width: 800px;
