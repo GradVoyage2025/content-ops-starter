@@ -141,10 +141,57 @@ section, header, footer {
   background: var(--gold);
   color: var(--royal-blue);
 }
+/* ✨ ABOUT SECTION FIX */
 .about {
+  position: relative;
+  overflow: hidden;
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 6rem 1rem;
+  color: var(--white);
+  background: var(--royal-blue);
+  z-index: 1;
 }
+
+.about-bg {
+  position: absolute;
+  inset: 0;
+  background: url('assets/about-gradvoyage.jpg') center/cover no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+.about .section-title {
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  color: var(--white);
+  opacity: 0.95;
+}
+
+/* Add soft fade animation */
+.about.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .section-title {
   position: relative;
   display: inline-block;
