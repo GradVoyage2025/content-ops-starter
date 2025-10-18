@@ -28,6 +28,28 @@ body {
   line-height: 1.7;
   font-size: 1rem;
 }
+/* About GradVoyage Section */
+.about {
+  background: linear-gradient(180deg, var(--royal-blue) 0%, var(--mid-blue) 100%);
+  text-align: center;
+}
+
+.about h3 {
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  max-width: 750px;
+  margin: 0 auto;
+  color: var(--white);
+  opacity: 0.92;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
 
 /* Layout */
 .container {
