@@ -1,63 +1,259 @@
-/* GradVoyage — Final Polished Version
+/* GradVoyage — Polished Luxe Version
    Fonts: Playfair Display (titles), Poppins (body)
-   Colors: Deep navy #0B1A3A, Gold #E6C36A, White
+   Palette: Deep navy #0B1A3A, Gold #E6C36A, White
 */
-:root{
+
+:root {
   --navy: #0B1A3A;
   --deep-navy: #071C44;
   --gold: #E6C36A;
   --white: #ffffff;
+  --gold-light: rgba(230,195,106,0.25);
   --max-width: 1100px;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--white);-webkit-font-smoothing:antialiased}
-.container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.5rem 0}
-.logo img{height:42px}
-.site-header{position:sticky;top:0;background:linear-gradient(90deg, rgba(11,26,58,0.9), rgba(11,26,58,0.6));backdrop-filter:saturate(120%) blur(4px);z-index:50}
-.main-nav a{color:var(--white);text-decoration:none;margin-left:1rem;font-weight:600}
-.main-nav .cta{background:transparent;border:2px solid var(--gold);padding:0.4rem 0.8rem;border-radius:6px;color:var(--gold)}
-.hero{position:relative;min-height:66vh;display:flex;align-items:center}
-.hero-bg{position:absolute;inset:0;background-image:url('assets/hero.jpg');background-size:cover;background-position:center;filter:brightness(0.45)}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,28,68,0.85), rgba(7,28,68,0.35))}
-.hero-content{position:relative;z-index:2;padding:4rem 1rem;text-align:left;color:var(--white)}
-.hero-logo{height:56px;margin-bottom:1rem}
-.hero h1{font-family:'Playfair Display', serif;font-size:clamp(2rem,4vw,3.2rem);margin:0 0 0.6rem;color:var(--white)}
-.tagline{opacity:0.95;margin-bottom:1rem}
-.hero-ctas .btn{display:inline-block;margin-right:0.75rem;padding:0.8rem 1.15rem;border-radius:8px;text-decoration:none;font-weight:600}
-.btn.primary{background:var(--gold);color:var(--navy)}
-.btn.ghost{border:2px solid var(--gold);color:var(--gold);background:transparent}
 
-/* Founder section */
-.section{padding:3.5rem 0}
-.founder{color:var(--white)}
-.founder-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:2rem;align-items:center}
-.founder-photo-wrap{display:flex;justify-content:center}
-.founder-photo{width:100%;max-width:360px;border-radius:8px;border:4px solid rgba(255,255,255,0.06);box-shadow:0 8px 24px rgba(0,0,0,0.6);object-fit:cover}
-.founder-card{background:linear-gradient(180deg, rgba(9,25,54,0.65), rgba(9,25,54,0.5));border:1px solid rgba(230,195,106,0.15);padding:1.5rem;border-radius:8px}
-.founder-header{display:flex;align-items:center;gap:0.8rem;margin-bottom:0.6rem}
-.founder-logo{height:38px;opacity:0.95}
-.founder-card h2{font-family:'Playfair Display',serif;color:var(--gold);margin:0 0 0.35rem}
-.founder-card p{line-height:1.6}
-.quote{color:var(--gold);font-weight:600;margin-top:0.8rem}
+* { box-sizing: border-box; }
 
-/* Simple services */
-.simple h3{font-family:'Playfair Display',serif;color:var(--gold)}
-.services-list{list-style:none;padding:0;margin:0}
-.services-list li{padding:0.45rem 0;border-bottom:1px dashed rgba(255,255,255,0.04)}
-
-/* Footer */
-.site-footer{padding:1.5rem 0;border-top:1px solid rgba(255,255,255,0.03);text-align:center}
-
-/* Responsive */
-@media(max-width:900px){
-  .founder-grid{grid-template-columns:1fr;gap:1.25rem}
-  .hero{min-height:56vh}
-  .hero-content{padding:2rem 1rem}
-  .main-nav a{display:none}
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
-/* Animations */
-.fade-in{opacity:0;transform:translateY(18px);animation:fadeInUp 0.7s forwards}
-.fade-in.delay-1{animation-delay:0.18s}
-@keyframes fadeInUp{to{opacity:1;transform:none}}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, rgba(11,26,58,0.95), rgba(11,26,58,0.6));
+  backdrop-filter: saturate(120%) blur(4px);
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.logo img { height: 42px; }
+
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--gold);
+}
+
+.main-nav .cta {
+  background: transparent;
+  border: 2px solid var(--gold);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  color: var(--gold);
+  transition: all 0.3s ease;
+}
+
+.main-nav .cta:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 66vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.45);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7,28,68,0.85), rgba(7,28,68,0.35));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 1rem;
+  color: var(--white);
+}
+
+.hero-logo {
+  height: 56px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 0 0 0.6rem;
+  color: var(--white);
+}
+
+.tagline {
+  opacity: 0.95;
+  margin-bottom: 1rem;
+}
+
+.hero-ctas .btn {
+  display: inline-block;
+  margin-right: 0.75rem;
+  padding: 0.8rem 1.15rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.btn.primary:hover {
+  background: #f5d67a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(230,195,106,0.25);
+}
+
+.btn.ghost {
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+}
+
+.btn.ghost:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* Founder */
+.section { padding: 3.5rem 0; }
+
+.founder {
+  color: var(--white);
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.founder-photo-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.founder-photo {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 8px;
+  border: 4px solid rgba(255,255,255,0.06);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.founder-photo:hover {
+  transform: scale(1.03);
+}
+
+.founder-card {
+  background: linear-gradient(180deg, rgba(9,25,54,0.65), rgba(9,25,54,0.5));
+  border: 1px solid var(--gold-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.founder-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.founder-logo {
+  height: 38px;
+  opacity: 0.95;
+}
+
+.founder-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  margin: 0 0 0.35rem;
+}
+
+.founder-card p { line-height: 1.6; }
+
+.quote {
+  color: var(--gold);
+  font-weight: 600;
+  margin-top: 0.8rem;
+  font-style: italic;
+}
+
+/* Services */
+.simple h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.intro-text {
+  font-size: 1rem;
+  opacity: 0.9;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 2rem;
+}
+
+.services-list li {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(230,195,106,0.1);
+  border-left: 4px solid var(--gold);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.services-l
