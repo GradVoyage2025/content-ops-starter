@@ -29,7 +29,7 @@ body {
   font-size: 1rem;
 /* About GradVoyage Section */
 .about {
-  background: linear-gradient(180deg, var(--royal-blue) 0%, var(--mid-blue) 100%);
+  background: transparent;
   text-align: center;
   padding: 5rem 1rem;
 }
