@@ -6,15 +6,17 @@
   <title>GradVoyage — Your Journey Toward Graduate Success</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="assets/styles.css">
+
+   <link rel="icon" href="assets/gradvoyage-logo.jpg" type="image/jpg">
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
+   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#">
-        <img src="assets/gradvoyage-logo.jpg" alt="GradVoyage logo">
+      <a class="logo" href="#home">
+        <img src="assets/gradvoyage-logo.jpg" alt="GradVoyage logo" loading="lazy">
       </a>
       <nav class="main-nav">
         <a href="#about">About</a>
@@ -25,13 +27,15 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
+    <section class="hero" id="home">
     <div class="hero-bg"></div>
     <div class="hero-content container">
-      <img class="hero-logo" src="assets/gradvoyage-logo.jpg" alt="GradVoyage logo">
+      <img class="hero-logo" src="assets/gradvoyage-logo.jpg" alt="GradVoyage logo" loading="lazy">
       <h1>From Dream to Destination</h1>
-      <p class="tagline">Your journey to global graduate success begins here — with authentic SOPs, persuasive LORs, and standout resumes.</p>
+      <p class="tagline">
+        Your journey to global graduate success begins here — with authentic SOPs,
+        persuasive LORs, and standout resumes.
+      </p>
       <div class="hero-ctas">
         <a class="btn primary" href="#services">Get Started</a>
         <a class="btn ghost" href="#about">Learn More</a>
@@ -39,57 +43,59 @@
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section about">
+    <section id="about" class="section about">
     <div class="container fade-in">
       <h3 class="section-title">About GradVoyage</h3>
       <p class="about-text">
-        <strong>GradVoyage</strong> is a personalized admissions consulting studio helping students and professionals
-        craft powerful, authentic applications for top global universities.  
+        <strong>GradVoyage</strong> is a personalized admissions consulting studio
+        helping students and professionals craft powerful, authentic applications
+        for top global universities.
         <br><br>
-        Founded by <strong>Swarna Rao Kambhampaty</strong>, GradVoyage blends creativity and structure to create
-        compelling <strong>SOPs</strong>, <strong>LORs</strong>, and <strong>Resumes</strong> that truly represent
+        Founded by <strong>Swarna Rao Kambhampaty</strong>, GradVoyage blends
+        creativity and structure to create compelling <strong>SOPs</strong>,
+        <strong>LORs</strong>, and <strong>Resumes</strong> that truly represent
         who you are and what you aspire to achieve.
       </p>
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
-  <section id="services" class="section services">
+   <section id="services" class="section services">
     <div class="container">
       <h3 class="section-title">Our Expertise</h3>
       <ul class="services-list">
-        <li><strong>✍️ SOP Writing</strong> – Authentic, impactful statements that highlight your voice and goals.</li>
-        <li><strong>🧾 LOR Drafting</strong> – Structured, credible recommendations aligned with your achievements.</li>
-        <li><strong>📄 Resume Crafting</strong> – Tailored, global-standard resumes for graduate applications.</li>
-        <li><strong>🎯 Profile Evaluation</strong> – Insightful feedback to strengthen your academic positioning.</li>
-        <li><strong>🏫 University Shortlisting</strong> – Balanced list based on your academic fit and aspirations.</li>
-        <li><strong>🤝 End-to-End Mentorship</strong> – Complete guidance from ideation to submission.</li>
+        <li><strong>✍️ SOP Writing</strong> — Authentic, impactful statements that highlight your voice and goals.</li>
+        <li><strong>🧾 LOR Drafting</strong> — Structured, credible recommendations aligned with your achievements.</li>
+        <li><strong>📄 Resume Crafting</strong> — Tailored, global-standard resumes for graduate applications.</li>
+        <li><strong>🎯 Profile Evaluation</strong> — Insightful feedback to strengthen your academic positioning.</li>
+        <li><strong>🏫 University Shortlisting</strong> — Balanced list based on your academic fit and aspirations.</li>
+        <li><strong>🤝 End-to-End Mentorship</strong> — Complete guidance from ideation to submission.</li>
       </ul>
     </div>
   </section>
 
-  <!-- FOUNDER SECTION -->
-  <section id="founder" class="section founder">
+   <section id="founder" class="section founder">
     <div class="container founder-grid">
       <div class="founder-photo-wrap fade-in">
-        <img src="assets/founder-photo.jpg" alt="Founder Photo" class="founder-photo">
+        <img src="assets/founder-photo.jpg" alt="Founder Photo" class="founder-photo" loading="lazy">
       </div>
       <div class="founder-card fade-in delay-1">
         <h2>Meet Our Founder</h2>
-        <p>With a passion for empowering global learners, <strong>Swarna Rao Kambhampaty</strong> founded
-        <strong>GradVoyage</strong> to help students craft authentic, narrative-driven applications. Her 8+ years of
-        HR and academic experience have helped hundreds reach their dream universities.</p>
+        <p>
+          With a passion for empowering global learners,
+          <strong>Swarna Rao Kambhampaty</strong> founded <strong>GradVoyage</strong>
+          to help students craft authentic, narrative-driven applications.
+          Her 8+ years of HR and academic experience have helped hundreds
+          reach their dream universities.
+        </p>
         <p class="quote">“Every journey begins with a story — let’s make yours unforgettable.”</p>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="section contact">
+   <section id="contact" class="section contact">
     <div class="container">
       <h3 class="section-title">Get in Touch</h3>
-      <form class="contact-form" action="#" method="POST">
+      <form class="contact-form" action="mailto:contact@gradvoyage.in" method="POST" enctype="text/plain">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
@@ -97,12 +103,11 @@
       </form>
       <div class="contact-info">
         <p><strong>Email:</strong> <a href="mailto:contact@gradvoyage.in">contact@gradvoyage.in</a></p>
-        <p><strong>Instagram:</strong> <a href="https://instagram.com/gradvoyage">@gradvoyage</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/gradvoyage" target="_blank">@gradvoyage</a></p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2025 GradVoyage — Crafted with purpose and precision.</p>
