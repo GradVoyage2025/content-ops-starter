@@ -75,7 +75,6 @@ section, header, footer {
   color: var(--royal-blue);
 }
 
-/* ✨ HERO SECTION */
 .hero {
   position: relative;
   display: flex;
@@ -83,87 +82,73 @@ section, header, footer {
   justify-content: center;
   text-align: center;
   min-height: 100vh;
-  padding: 4rem 1rem;
   overflow: hidden;
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(rgba(7, 28, 68, 0.55), rgba(7, 28, 68, 0.8)),
+  background: 
+    linear-gradient(rgba(7, 28, 68, 0.45), rgba(7, 28, 68, 0.85)),
     url('hero1.jpg') center/cover no-repeat;
-  background-attachment: fixed;
-  background-color: #1A2E75;
   z-index: -1;
   filter: brightness(1.05);
+  background-attachment: fixed;
 }
 
-/* ✨ Hero Content */
 .hero-content {
   max-width: 850px;
-  color: var(--white);
+  color: #fff;
   z-index: 2;
+  padding: 2rem;
 }
 
 .hero-logo {
   height: 80px;
   margin-bottom: 1.5rem;
-  filter: brightness(1.15);
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 4vw, 3.6rem);
-  color: var(--gold);
-  line-height: 1.2;
+  color: #E6C36A;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  letter-spacing: 0.5px;
 }
 
 .hero .tagline {
-  color: var(--white);
+  color: #fff;
+  opacity: 0.9;
   font-size: 1.1rem;
-  font-weight: 300;
-  opacity: 0.95;
   margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-/* Buttons */
-.hero-ctas {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.85rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
 }
 
 .btn.primary {
-  background: var(--gold);
-  color: var(--royal-blue);
+  background: #E6C36A;
+  color: #1A2E75;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn.primary:hover {
   background: #f8dc91;
-  box-shadow: 0 0 10px rgba(230, 195, 106, 0.4);
 }
 
 .btn.ghost {
-  border: 2px solid var(--gold);
-  color: var(--gold);
+  border: 2px solid #E6C36A;
+  color: #E6C36A;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn.ghost:hover {
-  background: var(--gold);
-  color: var(--royal-blue);
+  background: #E6C36A;
+  color: #1A2E75;
 }
 
 .fade-in {
@@ -197,7 +182,6 @@ section, header, footer {
   }
 }
 
-
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
@@ -215,7 +199,6 @@ section, header, footer {
     flex-direction: column;
   }
 }
-
 
 .about {
   position: relative;
