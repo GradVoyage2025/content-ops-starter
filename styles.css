@@ -173,9 +173,7 @@ section, header, footer {
   color: var(--royal-blue);
 }
 
-/* =============================
-   ABOUT SECTION
-============================= */
+
 .about {
   position: relative;
   overflow: hidden;
@@ -249,9 +247,7 @@ section, header, footer {
   opacity: 0.95;
 }
 
-/* =============================
-   SERVICES SECTION
-============================= */
+
 .services {
   position: relative;
   padding: 6rem 1.5rem;
@@ -313,9 +309,6 @@ section, header, footer {
   margin-bottom: 0.4rem;
 }
 
-/* =============================
-   FOUNDER SECTION
-============================= */
 .founder {
   position: relative;
   text-align: center;
@@ -345,9 +338,7 @@ section, header, footer {
   margin-bottom: 1rem;
 }
 
-/* =============================
-   TESTIMONIALS SECTION
-============================= */
+
 .testimonials {
   position: relative;
   text-align: center;
@@ -393,9 +384,7 @@ section, header, footer {
   transform: translateY(-4px);
 }
 
-/* =============================
-   CONTACT + FOOTER
-============================= */
+
 .contact {
   text-align: center;
   padding: 5rem 1.5rem;
