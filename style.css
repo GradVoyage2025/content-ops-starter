@@ -90,12 +90,12 @@ section, header, footer {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: 
+  background:
     linear-gradient(rgba(7, 28, 68, 0.55), rgba(7, 28, 68, 0.8)),
     url('hero1.jpg') center/cover no-repeat;
-  z-index: -1;
-  background-color: var(--royal-blue);
   background-attachment: fixed;
+  background-color: #1A2E75;
+  z-index: -1;
   filter: brightness(1.05);
 }
 
