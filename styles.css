@@ -172,7 +172,25 @@ section, header, footer {
   background: var(--gold);
   color: var(--royal-blue);
 }
+.hero-url {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: var(--gold);
+  opacity: 0.9;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
 
+.hero-url a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.hero-url a:hover {
+  color: #f8dc91;
+  text-decoration: underline;
+}
 
 .about {
   position: relative;
