@@ -265,7 +265,23 @@ section, header, footer {
   opacity: 0.95;
 }
 
+.about-link {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: var(--gold);
+  opacity: 0.9;
+}
 
+.about-link a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-link a:hover {
+  color: #f8dc91;
+  text-decoration: underline;
+}
 .services {
   position: relative;
   padding: 6rem 1.5rem;
@@ -281,51 +297,107 @@ section, header, footer {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(26, 46, 117, 0.7), rgba(26, 46, 117, 0.85)),
+    linear-gradient(rgba(26, 46, 117, 0.75), rgba(26, 46, 117, 0.9)),
     url('services-banner.jpg') center/cover no-repeat;
   background-attachment: fixed;
   filter: brightness(1.05);
   z-index: -1;
 }
 
+/* Section title styling */
 .services .section-title {
   color: var(--gold);
   font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.5px;
 }
 
+/* Intro text */
+.services .intro-text {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: var(--white);
+  opacity: 0.9;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+
+/* Square box layout for services */
 .services-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  max-width: 950px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
   margin: 0 auto;
   list-style: none;
 }
 
 .services-list li {
-  background: rgba(255, 255, 255, 0.06);
-  padding: 1.5rem;
-  border-radius: 10px;
-  border-left: 4px solid var(--gold);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(230, 195, 106, 0.25);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  color: var(--white);
   text-align: left;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  height: 260px; /* fixed height for neat squares */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .services-list li:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(230, 195, 106, 0.15);
 }
 
 .services-list strong {
   display: block;
   color: var(--gold);
   font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
 }
+
+/* CTA area */
+.cta-section {
+  margin-top: 3rem;
+}
+
+.cta-section .quote {
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.cta-section .btn.primary {
+  background: var(--gold);
+  color: var(--royal-blue);
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-section .btn.primary:hover {
+  background: #f8dc91;
+  transform: translateY(-3px);
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+  .services-list li {
+    height: auto;
+  }
+}
+
 
 .founder {
   position: relative;
@@ -462,4 +534,20 @@ section, header, footer {
   .hero {
     padding: 3rem 1rem;
   }
+}
+/* Fix: Make email and Instagram links white */
+.contact-info {
+  color: var(--white);
+}
+
+.contact-info a {
+  color: var(--white) !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: var(--gold) !important;
+  text-decoration: underline;
 }
