@@ -641,7 +641,6 @@ section, header, footer {
   opacity: 0.9;
 }
 
-
 @media (max-width: 900px) {
   .services-list,
   .testimonials-grid {
