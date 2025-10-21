@@ -1,4 +1,4 @@
-s/@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
   --royal-blue: #1A2E75;
@@ -213,6 +213,7 @@ section, header, footer {
   z-index: -1;
   filter: brightness(1.05);
 }
+
 .about-header {
   display: flex;
   align-items: center;
@@ -640,6 +641,7 @@ section, header, footer {
   color: var(--white);
   opacity: 0.9;
 }
+
 
 @media (max-width: 900px) {
   .services-list,
