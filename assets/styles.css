@@ -213,7 +213,6 @@ section, header, footer {
   z-index: -1;
   filter: brightness(1.05);
 }
-
 .about-header {
   display: flex;
   align-items: center;
