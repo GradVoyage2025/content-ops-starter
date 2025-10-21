@@ -474,12 +474,38 @@ section, header, footer {
   transform: translateY(-4px);
 }
 
+/* ==============================
+   PRICING SECTION (WITH BACKGROUND IMAGE)
+============================== */
 .pricing {
-  background: var(--royal-blue);
+  position: relative;
+  text-align: center;
   color: var(--white);
   padding: 6rem 1.5rem;
-  text-align: center;
   overflow: hidden;
+  background: none !important;
+  z-index: 1;
+}
+
+.pricing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(26, 46, 117, 0.75), rgba(26, 46, 117, 0.9)),
+    url('pricing-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  filter: brightness(1.05);
+  z-index: -1;
+}
+
+.pricing-subtitle {
+  font-size: 1.1rem;
+  color: var(--gold);
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
 }
 
 .pricing .section-title {
@@ -496,6 +522,7 @@ section, header, footer {
   margin-bottom: 3rem;
 }
 
+/* Grid layout */
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -504,8 +531,9 @@ section, header, footer {
   margin: 0 auto;
 }
 
+/* Individual pricing cards */
 .pricing-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
   color: #0B1A3A;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -613,6 +641,7 @@ section, header, footer {
   color: var(--white);
   opacity: 0.9;
 }
+
 
 @media (max-width: 900px) {
   .services-list,
