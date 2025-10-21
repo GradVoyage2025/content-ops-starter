@@ -673,11 +673,14 @@ section, header, footer {
    CLEAN MINIMAL FOOTER (NO BACKGROUND IMAGE)
 ============================= */
 .site-footer {
-  background-color: var(--royal-blue); /* solid blue, no image */
-  color: var(--white);
-  padding: 4rem 2rem 2rem;
-  font-size: 0.95rem;
+  position: relative;
+  background-color: var(--royal-blue) !important;
   background-image: none !important;
+  z-index: 5;
+}
+
+.site-footer::before {
+  content: none !important;
 }
 
 .footer-container {
@@ -723,35 +726,41 @@ section, header, footer {
   filter: brightness(1.1);
 }
 
-.footer-column.about p {
-  margin-bottom: 1rem;
-  opacity: 0.9;
-  line-height: 1.6;
+/* =============================
+   Footer Clean-up Fix
+============================= */
+
+/* Remove any accidental background from left column */
+.footer-column.about {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-.social-icons {
-  margin-top: 1rem;
-}
-
-.social-icons a {
-  color: var(--gold);
-  font-size: 1.2rem;
-  margin-right: 0.8rem;
+/* Gold links for email and website */
+.gold-link {
+  color: var(--gold) !important;
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
-  opacity: 0.7;
+.gold-link:hover {
+  color: #f8dc91 !important;
+  text-decoration: underline;
 }
 
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.15);
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  font-size: 0.85rem;
-  opacity: 0.85;
+/* General footer polish */
+.site-footer {
+  background-color: var(--royal-blue) !important;
+  background-image: none !important;
+  color: var(--white);
+  padding: 4rem 2rem 2rem;
+}
+
+.footer-column p,
+.footer-column ul li a {
+  color: var(--white);
 }
 
 
