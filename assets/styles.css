@@ -669,17 +669,15 @@ section, header, footer {
   text-decoration: underline;
 }
 
-/* =============================
-   FOOTER SECTION (INSPIRED BY VAPPINGO)
-============================= */
-/* =============================
-   REFINED FOOTER DESIGN
+//* =============================
+   CLEAN MINIMAL FOOTER (NO BACKGROUND IMAGE)
 ============================= */
 .site-footer {
-  background-color: var(--royal-blue);
+  background-color: var(--royal-blue); /* solid blue, no image */
   color: var(--white);
   padding: 4rem 2rem 2rem;
   font-size: 0.95rem;
+  background-image: none !important;
 }
 
 .footer-container {
@@ -755,6 +753,7 @@ section, header, footer {
   font-size: 0.85rem;
   opacity: 0.85;
 }
+
 
 
 .thank-you-popup {
