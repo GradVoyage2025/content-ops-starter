@@ -647,16 +647,16 @@ section, header, footer {
 
 /* Layout */
 /* --- FINAL FOOTER POLISH --- */
-.footer-container {
-  display: grid;
-  grid-template-columns: 0.8fr 1fr 1fr; /* left column smaller for tidy alignment */
-  gap: 6rem;
-  max-width: 1200px;
+footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 100px;
+  max-width: 1000px;
   margin: 0 auto;
-  align-items: center; /* ✅ vertically align all three columns */
   text-align: left;
   padding-bottom: 2rem;
-  padding-left: 1.5rem;
+  flex-wrap: wrap;
 }
 
 /* Left column adjustments */
