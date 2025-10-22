@@ -366,6 +366,17 @@ section, header, footer {
 .cta-section {
   margin-top: 3rem;
 }
+.comparison::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(26, 46, 117, 0.75), rgba(26, 46, 117, 0.9)),
+    url('assets/comparison-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  filter: brightness(1.05);
+  z-index: -1;
+}
 
 .cta-section .quote {
   font-style: italic;
