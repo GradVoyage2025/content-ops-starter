@@ -482,6 +482,57 @@ section, header, footer {
   align-items: flex-start;
   gap: 0.5rem;
 }
+/* ==============================
+   CALL TO ACTION BANNER
+============================== */
+.cta-banner {
+  position: relative;
+  text-align: center;
+  padding: 5rem 2rem;
+  color: var(--white);
+  background:
+    linear-gradient(rgba(26, 46, 117, 0.8), rgba(26, 46, 117, 0.9)),
+    url('cta-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(10, 15, 50, 0.4), rgba(10, 15, 50, 0.5));
+  z-index: -1;
+}
+
+.cta-title {
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+.cta-banner .btn.primary {
+  background: var(--gold);
+  color: var(--royal-blue);
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-banner .btn.primary:hover {
+  background: #f8dc91;
+  transform: translateY(-3px);
+}
 
 /* Responsive design */
 @media (max-width: 900px) {
