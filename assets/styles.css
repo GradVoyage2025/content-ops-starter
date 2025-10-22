@@ -649,16 +649,18 @@ section, header, footer {
 /* --- FOOTER SPACING FIX --- */
 .footer-container {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr 1fr; /* balanced proportion */
-  gap: 4.5rem; /* refined spacing between columns */
-  max-width: 1100px;
+  grid-template-columns: 1.2fr 1fr 1fr; /* wider left column, evenly spaced right ones */
+  gap: 6rem; /* increased horizontal space */
+  max-width: 1200px; /* wider layout for breathing room */
   margin: 0 auto;
   align-items: start;
   text-align: left;
   padding-bottom: 2rem;
+  padding-left: 1.5rem; /* slight left padding to balance */
 }
+
 .footer-logo {
-  width: 100px;      /* fixed logo size */
+  width: 100px;
   height: auto;
   display: block;
   margin-bottom: 1rem;
@@ -667,9 +669,13 @@ section, header, footer {
 
 /* About text narrower for better proportion */
 .footer-about p {
-  max-width: 260px;
+  max-width: 320px; /* allow more text width */
   line-height: 1.7;
   opacity: 0.9;
+}
+.footer-column:nth-child(2),
+.footer-column:nth-child(3) {
+  margin-left: 1rem;
 }
 
 /* Ensure Explore and Contact columns stay vertically aligned */
@@ -690,15 +696,22 @@ section, header, footer {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+    padding-left: 0;
   }
 
   .footer-about p {
     margin: 0 auto;
   }
 
+  .footer-column:nth-child(2),
+  .footer-column:nth-child(3) {
+    margin-left: 0;
+  }
+
   .footer-logo {
     margin: 0 auto 1rem;
   }
+}
 }
 .footer-social {
   margin-top: 1rem;
