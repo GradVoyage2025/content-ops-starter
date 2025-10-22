@@ -671,15 +671,6 @@ section, header, footer {
 /* =============================
    CLEAN FINAL FOOTER
 ============================= */
-.site-footer,
-.site-footer::before,
-.footer-container,
-.footer-column.about {
-  background: none !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  border: none !important;
-}
 
 .site-footer {
   background-color: var(--royal-blue) !important;
@@ -794,4 +785,22 @@ section, header, footer {
     align-items: center;
   }
 }
+/* FINAL FIX - Clean footer background */
+.footer-about,
+.footer-about::before {
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  content: none !important;
+}
 
+/* FINAL FIX - Clean footer background */
+.footer-about,
+.footer-about::before {
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  content: none !important;
+}
