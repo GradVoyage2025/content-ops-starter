@@ -835,60 +835,44 @@ section, header, footer {
   content: none !important;
   filter: none !important;
 }
-
-/* --- Footer Container --- */
+/* --- FIX FOOTER ALIGNMENT --- */
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;       /* vertically centers all columns */
-  flex-wrap: wrap;
-  gap: 2.5rem;
-  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* equal 3-column layout */
+  gap: 3rem;
+  max-width: 1100px;
   margin: 0 auto;
+  align-items: start;
   text-align: left;
   padding-bottom: 2rem;
 }
 
-/* --- Footer Columns --- */
+/* Each column stays balanced */
 .footer-column {
-  flex: 1 1 280px;
-  min-width: 260px;
+  min-width: 0;
 }
 
-/* --- Footer Logo --- */
-.footer-logo {
-  width: 120px !important;
-  height: auto;
-  display: block;
-  margin-bottom: 1rem;
-  filter: brightness(1.1);
-}
-
-/* --- About Text --- */
+/* Ensure About text doesn’t expand too much */
 .footer-about p {
-  font-size: 0.95rem;
+  max-width: 300px;
   line-height: 1.7;
-  color: var(--white);
   opacity: 0.9;
-  max-width: 280px;
 }
 
-/* --- Social Icons --- */
-.footer-social {
-  margin-top: 1rem;
-  display: flex;
-  gap: 0.75rem;
-  font-size: 1.2rem;
-}
+/* Center content on mobile */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-.footer-social a {
-  color: var(--gold);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+  .footer-about p {
+    margin: 0 auto;
+  }
 
-.footer-social a:hover {
-  color: #f8dc91;
+  .footer-social {
+    justify-content: center;
+  }
 }
 
 /* --- Links and Contact --- */
