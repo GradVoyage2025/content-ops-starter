@@ -785,7 +785,6 @@ section, header, footer {
 /* =============================
    CLEAN, CENTERED FOOTER (FINAL)
 ============================= */
-
 .site-footer {
   background-color: var(--royal-blue) !important;
   color: var(--white);
