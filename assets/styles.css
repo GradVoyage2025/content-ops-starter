@@ -398,14 +398,26 @@ section, header, footer {
   }
 }
 
-/* ==============================
-   THE GRADVOYAGE DIFFERENCE
-============================== */
 .comparison {
+  position: relative;
   padding: 6rem 1.5rem;
   text-align: center;
-  background: var(--royal-blue);
   color: var(--white);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Background Image Layer */
+.comparison::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(26, 46, 117, 0.75), rgba(26, 46, 117, 0.9)),
+    url('comparison-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  filter: brightness(1.05);
+  z-index: -1;
 }
 
 .comparison .section-title {
@@ -419,6 +431,7 @@ section, header, footer {
   font-size: 1.1rem;
   opacity: 0.9;
   margin-bottom: 3rem;
+  color: var(--white);
 }
 
 /* Two-column layout */
@@ -430,7 +443,7 @@ section, header, footer {
   overflow: hidden;
   max-width: 1000px;
   margin: 0 auto;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
 }
 
 /* Each side */
@@ -440,11 +453,11 @@ section, header, footer {
 }
 
 .ai-side {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .human-side {
-  background: var(--mid-blue);
+  background: rgba(26, 46, 117, 0.85);
 }
 
 .comparison-column h4 {
@@ -468,10 +481,6 @@ section, header, footer {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-}
-
-.comparison-column ul li::before {
-  content: "";
 }
 
 /* Responsive design */
