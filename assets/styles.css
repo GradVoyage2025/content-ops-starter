@@ -804,3 +804,20 @@ section, header, footer {
   border: none !important;
   content: none !important;
 }
+/* Fix footer logo sizing and alignment */
+.footer-logo {
+  width: 120px !important;   /* moderate logo size */
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  filter: brightness(1.1);
+}
+
+/* Prevent image overflow or stretching */
+.footer-about img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
