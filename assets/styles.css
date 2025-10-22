@@ -820,4 +820,149 @@ section, header, footer {
   height: auto;
   object-fit: contain;
 }
+/* =============================
+   CLEAN, CENTERED FOOTER FIX
+============================= */
+
+/* Remove any leftover image or overlay */
+.site-footer,
+.footer-about,
+.footer-about::before {
+  background: var(--royal-blue) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  content: none !important;
+  filter: none !important;
+}
+
+/* --- Footer Container --- */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;       /* vertically centers all columns */
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+/* --- Footer Columns --- */
+.footer-column {
+  flex: 1 1 280px;
+  min-width: 260px;
+}
+
+/* --- Footer Logo --- */
+.footer-logo {
+  width: 120px !important;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  filter: brightness(1.1);
+}
+
+/* --- About Text --- */
+.footer-about p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--white);
+  opacity: 0.9;
+  max-width: 280px;
+}
+
+/* --- Social Icons --- */
+.footer-social {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.footer-social a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f8dc91;
+}
+
+/* --- Links and Contact --- */
+.footer-column h4 {
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-column ul li a {
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: var(--gold);
+  opacity: 1;
+}
+
+/* --- Gold contact links --- */
+.gold-link {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.gold-link:hover {
+  color: #f8dc91;
+  text-decoration: underline;
+}
+
+/* --- Footer Bottom --- */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid rgba(230, 195, 106, 0.2);
+  margin: 2rem auto 1rem;
+  max-width: 1100px;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-about p {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
 
