@@ -668,18 +668,26 @@ section, header, footer {
   text-decoration: underline;
 }
 
-//* =============================
-   CLEAN MINIMAL FOOTER (NO BACKGROUND IMAGE)
+/* =============================
+   CLEAN FINAL FOOTER
 ============================= */
-.site-footer {
-  position: relative;
-  background-color: var(--royal-blue) !important;
+.site-footer,
+.site-footer::before,
+.footer-container,
+.footer-column.about {
+  background: none !important;
   background-image: none !important;
-  z-index: 5;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-.site-footer::before {
-  content: none !important;
+.site-footer {
+  background-color: var(--royal-blue) !important;
+  color: var(--white);
+  padding: 4rem 2rem 2rem;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(230, 195, 106, 0.2);
 }
 
 .footer-container {
@@ -719,24 +727,9 @@ section, header, footer {
   opacity: 1;
 }
 
-.footer-logo {
-  width: 140px;
-  margin-bottom: 1rem;
-  filter: brightness(1.1);
-}
-
-/* =============================
-   Footer Clean-up Fix
-============================= */
-
-/* Remove any accidental background from left column */
-.footer-column.about {
-  background: none !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-/* Gold links for email and website */
+/* Gold email + website links */
+.footer-column a,
+.footer-column p a,
 .gold-link {
   color: var(--gold) !important;
   text-decoration: none;
@@ -744,26 +737,24 @@ section, header, footer {
   transition: color 0.3s ease;
 }
 
+.footer-column a:hover,
 .gold-link:hover {
   color: #f8dc91 !important;
   text-decoration: underline;
 }
 
-/* General footer polish */
-.site-footer {
-  background-color: var(--royal-blue) !important;
-  background-image: none !important;
+/* COPYRIGHT */
+.footer-bottom {
+  text-align: center;
   color: var(--white);
-  padding: 4rem 2rem 2rem;
+  opacity: 0.9;
+  margin-top: 2rem;
+  font-size: 0.9rem;
 }
 
-.footer-column p,
-.footer-column ul li a {
-  color: var(--white);
-}
-
-
-
+/* =============================
+   THANK YOU POPUP
+============================= */
 .thank-you-popup {
   position: fixed;
   bottom: 30px;
@@ -783,5 +774,24 @@ section, header, footer {
 .thank-you-popup.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 900px) {
+  .services-list,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .footer-container {
+    text-align: center;
+  }
+  .footer-column {
+    align-items: center;
+  }
 }
 
