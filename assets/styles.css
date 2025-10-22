@@ -632,44 +632,8 @@ section, header, footer {
   box-shadow: 0 4px 14px rgba(230, 195, 106, 0.25);
 }
 
-.site-footer {
-  padding: 2rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-  background: var(--royal-blue);
-  color: var(--white);
-  opacity: 0.9;
-}
-
-
-@media (max-width: 900px) {
-  .services-list,
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero {
-    padding: 3rem 1rem;
-  }
-}
-/* Fix: Make email and Instagram links white */
-.contact-info {
-  color: var(--white);
-}
-
-.contact-info a {
-  color: var(--white) !important;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-  color: var(--gold) !important;
-  text-decoration: underline;
-}
-
 /* =============================
-   CLEAN FINAL FOOTER
+   CLEAN, CENTERED FOOTER (FINAL)
 ============================= */
 
 .site-footer {
@@ -681,14 +645,57 @@ section, header, footer {
   border-top: 1px solid rgba(230, 195, 106, 0.2);
 }
 
+/* Layout */
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr; /* even layout */
   gap: 3rem;
   max-width: 1100px;
   margin: 0 auto;
+  align-items: start;
+  text-align: left;
+  padding-bottom: 2rem;
 }
 
+/* About Section */
+.footer-about {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  filter: brightness(1.1);
+}
+
+.footer-about p {
+  max-width: 300px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.footer-social {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-social a {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f8dc91;
+}
+
+/* Column Titles */
 .footer-column h4 {
   color: var(--gold);
   font-family: 'Playfair Display', serif;
@@ -696,6 +703,7 @@ section, header, footer {
   margin-bottom: 1rem;
 }
 
+/* Links */
 .footer-column ul {
   list-style: none;
   padding: 0;
@@ -718,148 +726,34 @@ section, header, footer {
   opacity: 1;
 }
 
-/* Gold email + website links */
-.footer-column a,
-.footer-column p a,
+/* Gold contact links */
 .gold-link {
-  color: var(--gold) !important;
+  color: var(--gold);
   text-decoration: none;
-  font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.footer-column a:hover,
 .gold-link:hover {
-  color: #f8dc91 !important;
+  color: #f8dc91;
   text-decoration: underline;
 }
 
-/* COPYRIGHT */
+/* Footer bottom */
+.footer-divider {
+  border: 0;
+  border-top: 1px solid rgba(230, 195, 106, 0.2);
+  margin: 2rem auto 1rem;
+  max-width: 1100px;
+}
+
 .footer-bottom {
   text-align: center;
-  color: var(--white);
-  opacity: 0.9;
-  margin-top: 2rem;
   font-size: 0.9rem;
-}
-
-/* =============================
-   THANK YOU POPUP
-============================= */
-.thank-you-popup {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: rgba(230,195,106,0.95);
-  color: #1A2E75;
-  font-family: 'Poppins', sans-serif;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  font-weight: 500;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  z-index: 9999;
-}
-.thank-you-popup.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =============================
-   RESPONSIVE
-============================= */
-@media (max-width: 900px) {
-  .services-list,
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero {
-    padding: 3rem 1rem;
-  }
-  .footer-container {
-    text-align: center;
-  }
-  .footer-column {
-    align-items: center;
-  }
-}
-/* FINAL FIX - Clean footer background */
-.footer-about,
-.footer-about::before {
-  background: none !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  border: none !important;
-  content: none !important;
-}
-
-/* FINAL FIX - Clean footer background */
-.footer-about,
-.footer-about::before {
-  background: none !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  border: none !important;
-  content: none !important;
-}
-/* Fix footer logo sizing and alignment */
-.footer-logo {
-  width: 120px !important;   /* moderate logo size */
-  height: auto;
-  display: block;
-  margin-bottom: 1rem;
-  margin-left: 0;
-  filter: brightness(1.1);
-}
-
-/* Prevent image overflow or stretching */
-.footer-about img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-/* =============================
-   CLEAN, CENTERED FOOTER FIX
-============================= */
-
-/* Remove any leftover image or overlay */
-.site-footer,
-.footer-about,
-.footer-about::before {
-  background: var(--royal-blue) !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  border: none !important;
-  content: none !important;
-  filter: none !important;
-}
-/* --- FIX FOOTER ALIGNMENT --- */
-.footer-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* equal 3-column layout */
-  gap: 3rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  align-items: start;
-  text-align: left;
-  padding-bottom: 2rem;
-}
-
-/* Each column stays balanced */
-.footer-column {
-  min-width: 0;
-}
-
-/* Ensure About text doesn’t expand too much */
-.footer-about p {
-  max-width: 300px;
-  line-height: 1.7;
   opacity: 0.9;
+  color: var(--white);
 }
 
-/* Center content on mobile */
+/* Responsive */
 @media (max-width: 900px) {
   .footer-container {
     grid-template-columns: 1fr;
@@ -875,61 +769,6 @@ section, header, footer {
   }
 }
 
-/* --- Links and Contact --- */
-.footer-column h4 {
-  color: var(--gold);
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 0.6rem;
-}
-
-.footer-column ul li a {
-  color: var(--white);
-  text-decoration: none;
-  opacity: 0.85;
-  transition: color 0.3s ease;
-}
-
-.footer-column ul li a:hover {
-  color: var(--gold);
-  opacity: 1;
-}
-
-/* --- Gold contact links --- */
-.gold-link {
-  color: var(--gold);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.gold-link:hover {
-  color: #f8dc91;
-  text-decoration: underline;
-}
-
-/* --- Footer Bottom --- */
-.footer-bottom {
-  text-align: center;
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-.footer-divider {
-  border: 0;
-  border-top: 1px solid rgba(230, 195, 106, 0.2);
-  margin: 2rem auto 1rem;
-  max-width: 1100px;
-}
 
 
 
