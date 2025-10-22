@@ -649,13 +649,20 @@ section, header, footer {
 /* --- FOOTER SPACING FIX --- */
 .footer-container {
   display: grid;
-  grid-template-columns: 1fr 0.8fr 1fr; /* middle column narrower for balance */
-  gap: 5rem; /* wider spacing between columns */
+  grid-template-columns: 1.1fr 0.9fr 1fr; /* balanced proportion */
+  gap: 4.5rem; /* refined spacing between columns */
   max-width: 1100px;
   margin: 0 auto;
   align-items: start;
   text-align: left;
   padding-bottom: 2rem;
+}
+.footer-logo {
+  width: 100px;      /* fixed logo size */
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  filter: brightness(1.1);
 }
 
 /* About text narrower for better proportion */
@@ -687,6 +694,10 @@ section, header, footer {
 
   .footer-about p {
     margin: 0 auto;
+  }
+
+  .footer-logo {
+    margin: 0 auto 1rem;
   }
 }
 .footer-social {
