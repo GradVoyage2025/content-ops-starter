@@ -398,47 +398,95 @@ section, header, footer {
   }
 }
 
+/* ==============================
+   THE GRADVOYAGE DIFFERENCE
+============================== */
 .comparison {
-  text-align: center;
   padding: 6rem 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.comparison-table {
-  width: 100%;
-  max-width: 950px;
-  margin: 2rem auto;
-  border-collapse: collapse;
-  font-size: 1rem;
+  text-align: center;
+  background: var(--royal-blue);
   color: var(--white);
 }
 
-.comparison-table th, 
-.comparison-table td {
-  border: 1px solid rgba(230, 195, 106, 0.25);
-  padding: 1rem 1.2rem;
-  text-align: left;
-  vertical-align: middle;
-}
-
-.comparison-table th {
-  background-color: var(--mid-blue);
+.comparison .section-title {
   color: var(--gold);
   font-family: 'Playfair Display', serif;
-  font-weight: 600;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.comparison-table tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.04);
+.comparison .intro-text {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 3rem;
 }
 
-.comparison-table td:first-child {
-  font-weight: 500;
+/* Two-column layout */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(230, 195, 106, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Each side */
+.comparison-column {
+  padding: 2.5rem 2rem;
+  text-align: left;
+}
+
+.ai-side {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.human-side {
+  background: var(--mid-blue);
+}
+
+.comparison-column h4 {
   color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
 }
 
-.comparison-table td {
+.comparison-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparison-column ul li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
   line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.comparison-column ul li::before {
+  content: "";
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-column {
+    text-align: center;
+  }
+
+  .comparison-column ul li {
+    justify-content: center;
+  }
 }
 
 .founder {
