@@ -285,6 +285,7 @@ section, header, footer {
 .services {
   position: relative;
   padding: 6rem 1.5rem;
+  padding-bottom: 10rem !important; /* ✅ adds strong spacing below */
   text-align: center;
   color: var(--white);
   overflow: hidden;
@@ -363,6 +364,23 @@ section, header, footer {
 }
 
 /* CTA SECTION */
+.cta-section {
+  margin-top: 6rem;        /* Space above CTA */
+  margin-bottom: 5rem;     /* Space before next section */
+  text-align: center;
+}
+
+.cta-section .quote {
+  margin-bottom: 2rem;     /* Space below quote */
+  display: block;
+}
+
+.cta-section .btn.primary {
+  margin-top: 1.5rem;      /* Space above button */
+  margin-bottom: 2rem;     /* Space below button */
+  display: inline-block;
+}
+
 .cta-banner {
   position: relative;
   text-align: center;
@@ -430,6 +448,12 @@ section, header, footer {
     transform: translateY(0);
   }
 }
+.cta-banner .btn.primary:hover {
+  background: #f8dc91;
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(230, 195, 106, 0.5);
+}
+
 
 .comparison {
   position: relative;
